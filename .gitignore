@@ -1,0 +1,25 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Spark / Hadoop temporary files and metastore
+metastore_db/
+derby.log
+*.log
+warehouse/
+.spark-staging/
+
+# Python virtual environment
+venv/
+env/
+ENV/
+
+# System / IDE files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
