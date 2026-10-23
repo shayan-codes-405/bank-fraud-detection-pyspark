@@ -1,4 +1,4 @@
-# Bank Transaction Fraud Detection & Analytics using PySpark
+﻿# Bank Transaction Fraud Detection & Analytics using PySpark
 
 **Course:** INT315 Cluster Computing  
 **Platform:** Apache Spark 3.5.9, PySpark, Spark MLlib  
@@ -52,11 +52,8 @@ The system addresses both unsupervised behavioral clustering and supervised mach
 ## 📁 Repository Structure
 ```
 ├── Bank_Transaction_Fraud_Detection.csv   # Primary dataset (200,000 rows)
-├── INT315_Project_CA2.ipynb               # Fully executed Jupyter Notebook with plots
-├── start_jupyter_notebook.bat             # 1-Click launcher for Jupyter with isolated Spark/JDK 8
-├── start_spark_shell.bat                  # 1-Click launcher for Scala Spark Shell
-├── verify_setup.bat                       # 1-Click environment diagnostic script
-├── test_env.py                            # Environment test verification script
+├── INT315_Project_CA2.ipynb               # Fully executed Jupyter Notebook with all models & plots
+├── start_project.bat                      # 1-Click launcher to open notebook with PySpark & JDK 8
 ├── .gitignore                             # Git ignore rules for checkpoints/logs/metastore
 └── README.md                              # Complete academic project documentation
 ```
@@ -65,17 +62,6 @@ The system addresses both unsupervised behavioral clustering and supervised mach
 
 ## 🚀 How to Run the Project
 
-### Option 1: One-Click Launcher (Recommended)
-Double-click `start_jupyter_notebook.bat`. It will start Jupyter Notebook in your browser loaded with the isolated Java 8 and Python 3.10 environment.
-
-### Option 2: VS Code / JupyterLab
-1. Open `INT315_Project_CA2.ipynb`.
-2. Select the registered Jupyter kernel: **`PySpark (Python 3.10)`**.
-3. Run all cells. (All charts and outputs are already pre-rendered).
-
----
-
-## 🎓 Academic Viva Highlights
-- **Why scale features before K-Means?** K-Means relies on Euclidean distance. Standardizing with `StandardScaler(withMean=True, withStd=True)` ensures large rupee values do not overpower age or hour features.
-- **Why drop identifiers?** High-cardinality arbitrary UUIDs (`Customer_ID`, `Transaction_ID`) cause sparse vector bloat and lead to overfitting.
-- **Why evaluate both Accuracy and F1-score?** Due to class imbalance (~95% legitimate vs ~5% fraud), F1-score provides a balanced measure of precision and recall.
+### One-Click Execution (Recommended)
+Double-click **`start_project.bat`**.  
+It will automatically activate the isolated environment (Java 8 + Python 3.10) and open **`INT315_Project_CA2.ipynb`** directly in your browser.
